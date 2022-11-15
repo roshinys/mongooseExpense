@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css"
+      integrity="sha512-RvQxwf+3zJuNwl4e0sZjQeX7kUa3o82bDETpgVCH2RiwYSZVDdFJ7N/woNigN/ldyOOoKw8584jM4plQdt8bhA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Sign In</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <div class="signin-signup">
+          <form action="#" class="sign-in-form">
+            <h2 class="form-title">Sign In</h2>
+            <div class="input-field">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" placeholder="Email" id="email" name="email" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input
+                type="text"
+                placeholder="Password"
+                id="password"
+                name="password"
+              />
+            </div>
+            <button type="submit" id="login" class="btn solid">Login</button>
+            <a
+              href="register.html"
+              class="switch-icon"
+              style="text-decoration: none"
+              >Don't have an account Register Here</a
+            >
+            <p class="social-text">Sign in with</p>
+            <div class="social-media">
+              <a href="#" class="social-icon"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="#" class="social-icon">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon"
+                ><i class="fa-brands fa-google"></i
+              ></a>
+              <a href="#" class="social-icon">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+            <button id="forgot-password" class="btn solid">
+              Forgot Password?
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="panel-container">
+        <!-- <div class="message">
+          <h1>Something went wrong</h1>
+        </div>
+        <div class="message">
+          <h1>Something went wrong</h1>
+        </div> -->
+      </div>
+    </div>
+    <div class="form-forgotpass">
+      <button class="form-exit btn solid">X</button>
+      <h1>Forgot password?</h1>
+      <form class="sign-in-form">
+        <div class="input-field">
+          <i class="fa-solid fa-envelope"></i>
+          <input
+            type="email"
+            placeholder="Email"
+            id="forgotemail"
+            name="forgotemail"
+            required
+          />
+        </div>
+        <button id="change-pass" class="btn solid">change pass</button>
+      </form>
+    </div>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/0fd9e054d2.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+  <script src="auth.js" async></script>
+</html>

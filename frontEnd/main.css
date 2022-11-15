@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+
+:root {
+  --luffy: #e0144c;
+  --black: #000000;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+}
+body,
+input {
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-image: url("./images/onepiece.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.form-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.signin-signup {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.form-title {
+  font-size: 2.2rem;
+  margin-top: 10px;
+  color: white;
+  margin-bottom: 20px;
+}
+.input-field {
+  width: 380px;
+  height: 55px;
+  margin: 10px 0;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  border: 1px solid #333;
+}
+.input-field i {
+  text-align: center;
+  line-height: 55px;
+  color: white;
+  font-size: 1.1rem;
+}
+.input-field input {
+  background: none;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  line-height: 1;
+  font-size: 1.1 rem;
+  color: white;
+}
+
+.input-field input::placeholder {
+  font-weight: 500;
+  color: white;
+}
+.btn {
+  width: 150px;
+  height: 49px;
+  outline: none;
+  border: none;
+  background-color: #fb2576;
+  border-radius: 49px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  color: white;
+  /* margin-bottom: 20px; */
+}
+.btn:hover {
+  background-color: #e0144c;
+}
+.social-text {
+  padding: 0.4rem 0;
+  font-size: 1rem;
+  color: white;
+}
+.social-media {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+}
+.social-icon {
+  height: 46px;
+  width: 46px;
+  border: 1px solid #fb2576;
+  margin: 0rem 0.45rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color: white;
+  transition: 0.3s;
+}
+.switch-icon {
+  margin: 0.2rem 0;
+  font-size: 0.7rem;
+  text-decoration: none;
+  color: white;
+}
+.switch-icon:hover {
+  color: #fb2576;
+}
+
+.social-icon:hover {
+  color: #dd5353;
+  border-color: #dd5353;
+}
+.panel-container {
+  position: fixed;
+  right: 1%;
+  bottom: 2%;
+  width: 20%;
+}
+.message {
+  display: flex;
+  background-color: #e0144c;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 1.5rem;
+  color: white;
+  width: 100%;
+  height: 20%;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel-container h1 {
+  font-size: 15px;
+}
+#forgot-password {
+  width: max-content;
+  padding: 0 10px;
+}
+.form-forgotpass {
+  display: none;
+}
+.form-forgotpass.active {
+  display: flex;
+  position: fixed;
+  top: 2%;
+  left: 35%;
+  background-color: var(--luffy);
+  flex-direction: column;
+  padding: auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+.form-forgotpass h1 {
+  margin: auto;
+  padding: 10px 0;
+}
+
+.form-exit {
+  position: relative;
+  top: 20%;
+  right: -40%;
+  width: 15px;
+  height: 20px;
+  background-color: black;
+}
+
+/* mobile */
+
+@media (max-width: 400px) {
+  /* .form-container {
+    padding: 2rem;
+  } */
+  .form-title {
+    font-size: 1.5rem;
+  }
+  .container {
+    background-image: contain;
+    background-position: auto;
+  }
+  .input-field {
+    display: flex;
+    width: 200px;
+    height: 40px;
+    align-items: center;
+  }
+  .input-field input {
+    margin-left: 5px;
+  }
+  .social-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+  }
+  .switch-icon {
+    font-size: 0.5rem;
+  }
+  .panel-container {
+    position: fixed;
+    right: 1%;
+    bottom: 2%;
+    width: 30%;
+  }
+  .message {
+    display: flex;
+    padding: 0.3rem;
+    margin: 0.3rem 0;
+    border-radius: 0.5rem;
+    color: white;
+    width: 100%;
+    height: 7%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .panel-container h1 {
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 600px) and (min-width: 400px) {
+  .message {
+    display: flex;
+    padding: 0.4rem;
+    margin: 0.4rem 0;
+    border-radius: 0.4rem;
+    color: white;
+    width: 100%;
+    height: 7%;
+    align-items: center;
+    justify-content: center;
+  }
+  .panel-container h1 {
+    font-size: 0.7rem;
+  }
+} ;
